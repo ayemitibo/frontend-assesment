@@ -32,6 +32,7 @@ export default {
   components: [
     { path: '~/components', pathPrefix: false, prefix: 'base', extensions: ['vue'] },
     { path: '~/components/molecules', pathPrefix: false, prefix: 'mol', extensions: ['vue'] },
+    { path: '~/components/organisms', pathPrefix: false, prefix: 'org', extensions: ['vue'] },
     { path: '~/components/atoms', pathPrefix: false, prefix: 'atom', extensions: ['vue'] }
   ],
 

@@ -30,3 +30,12 @@ export default {
   }
 }
 </script>
+<style lang="scss" scoped>
+span {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  color: #c2e2e9;
+}
+</style>

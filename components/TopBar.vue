@@ -31,7 +31,7 @@
               width="65"
               height="49"
               alt="User"
-            />
+            >
             <div class="flex items-center truncate">
               <span
                 class="
@@ -41,8 +41,7 @@
                   font-medium
                   group-hover:text-gray-800
                 "
-                >Solomon</span
-              ><svg
+              >Solomon</span><svg
                 class="w-3 h-3 flex-shrink-0 ml-1 fill-current text-gray-400"
                 viewBox="0 0 12 12"
               >
@@ -71,8 +70,12 @@
           >
             <div>
               <div class="pt-0.5 pb-2 px-3 mb-1 border-b border-gray-200">
-                <div class="font-medium text-gray-800">Acme Inc.</div>
-                <div class="text-xs text-gray-500 italic">Administrator</div>
+                <div class="font-medium text-gray-800">
+                  Acme Inc.
+                </div>
+                <div class="text-xs text-gray-500 italic">
+                  Administrator
+                </div>
               </div>
               <ul>
                 <li>
@@ -88,8 +91,7 @@
                     "
                     href="/"
                     style="outline: none"
-                    >Settings</a
-                  >
+                  >Settings</a>
                 </li>
                 <li>
                   <a
@@ -104,8 +106,7 @@
                     "
                     href="/"
                     style="outline: none"
-                    >Sign Out</a
-                  >
+                  >Sign Out</a>
                 </li>
               </ul>
             </div>

@@ -35,7 +35,7 @@
       <input
         class="p-1 px-2 outline-none w-full text-gray-800"
         placeholder="Search for anything here"
-      />
+      >
       <div class="flex items-center mr-2">
         <base-icon name="search" />
       </div>

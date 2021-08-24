@@ -62,16 +62,8 @@ export default {
   }
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 ul {
-  span {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 23px;
-    color: #c2e2e9;
-  }
-
   & li:first-child {
     background: #46b2c8;
     span {
