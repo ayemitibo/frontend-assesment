@@ -3,6 +3,11 @@
   src: url("./fonts/br-sonoma/BRSonoma-Regular.otf");
 }
 
+@font-face {
+  font-family: Euclid Circular A Trial;
+  src: url("./fonts/EuclidCircularA-Regular/EuclidCircularA-Regular.ttf");
+}
+
 html{
     font-family: BR Sonoma;
 }
