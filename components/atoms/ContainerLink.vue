@@ -1,5 +1,13 @@
 <template>
-  <li class="container__link">
+  <li
+    class="
+      container__link
+      hover:bg-gray-100
+      transition-all
+      duration-75
+      cursor-pointer
+    "
+  >
     <div class="w-full py-4 px-5">
       <div class="flex justify-between">
         <slot name="image" />

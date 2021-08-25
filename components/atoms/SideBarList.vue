@@ -15,7 +15,9 @@
       href="forms.html"
     >
       <base-icon :name="content.icon" />
-      <span class="ml-4">{{ content.title }}</span>
+      <span class="ml-4" :style="{ color: content.color }">{{
+        content.title
+      }}</span>
     </a>
   </li>
 </template>

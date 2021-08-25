@@ -14,8 +14,10 @@
     <div class="text-gray-500 dark:text-gray-400">
       <div class="text-white">
         <div style="background-color: #1c697a" class="flex justify-center p-5">
-          <div>
-            <p>Cheta And Daughters Limited</p>
+          <div style="color: #c2e2e9">
+            <p class="text-lg">
+              Cheta And Daughters Limited
+            </p>
             <span> RC123456789 </span>
           </div>
         </div>
@@ -35,7 +37,8 @@ export default {
       navList: [
         {
           title: 'Dashboard',
-          icon: 'dashboard'
+          icon: 'dashboard',
+          color: '#FFFFFF'
         },
         {
           title: 'Agents',
@@ -66,9 +69,6 @@ export default {
 ul {
   & li:first-child {
     background: #46b2c8;
-    span {
-      color: #ffffff;
-    }
   }
 }
 </style>

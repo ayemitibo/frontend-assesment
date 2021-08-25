@@ -1,16 +1,8 @@
 <template>
   <div>
     <!-- Tabs -->
-    <ul class="inline-flex w-full px-1 pt-2">
-      <li class="px-4 py-2 -mb-px">
-        <a id="default-tab" href="#first">24 Unassigned</a>
-      </li>
-      <li class="px-4 py-2 font-semibold">
-        <a href="#second">12 assigned</a>
-      </li>
-      <li class="px-4 py-2 font-semibold">
-        <a href="#third">30 Completed</a>
-      </li>
+    <ul class="grid grid-cols-3 w-full px-1 pt-2">
+      <slot />
     </ul>
   </div>
 </template>
@@ -28,7 +20,7 @@ ul {
     color: #c4c4c4;
   }
 
-  & li:first-child {
+  & li.active {
     border-bottom: 1px solid #023a59;
     color: #023a59;
   }

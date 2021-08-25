@@ -1,5 +1,5 @@
 <template>
-  <div class="flex w-full">
+  <div class="flex w-full h-24">
     <div class="bg-white py-5">
       <a
         class="mx-7 text-lg font-bold text-gray-800 dark:text-gray-200"

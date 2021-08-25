@@ -1,21 +1,31 @@
 <template>
-  <div class="md:w-1/3 container">
+  <div class="container">
     <div class="container__title">
       <slot name="title" />
     </div>
-    <atom-tabs />
-    <mol-container-list>
-      <template #image>
-        <slot name="image" />
-      </template>
-      <template #content>
-        <slot name="content" />
-      </template>
-    </mol-container-list>
+    <slot name="tab" :changeTab="changeTab" :activeTab="activeTab" />
+    <transition name="fade" mode="out-in">
+      <slot :activeTab="activeTab" />
+    </transition>
   </div>
 </template>
+<script>
+export default {
+  data () {
+    return {
+      activeTab: ''
+    }
+  },
+  methods: {
+    changeTab (tab) {
+      this.activeTab = tab
+    }
+  }
+}
+</script>
 <style lang="scss" scoped>
 .container {
+  width: 30%;
   @apply h-full;
   &__title {
     height: 42px;
@@ -31,5 +41,20 @@
       line-height: 21px;
     }
   }
+}
+
+.fade-enter {
+  // display: no;
+  opacity: 0;
+}
+.fade-enter-active {
+  transition: opacity 0.5s ease;
+}
+.fade-leave {
+  //   display: none;
+}
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+  opacity: 0;
 }
 </style>
