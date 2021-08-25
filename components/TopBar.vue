@@ -12,9 +12,7 @@
       <div class="btn-rounded w-8 h-8 flex justify-center items-center">
         <base-icon name="back" />
       </div>
-      <div
-        class="container flex items-center justify-between h-full px-6 mx-auto"
-      >
+      <div class="container flex items-center h-full px-6 mx-auto">
         <!-- Search input -->
         <mol-search />
         <atom-notification />

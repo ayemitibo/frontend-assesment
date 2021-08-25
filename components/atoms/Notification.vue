@@ -12,7 +12,7 @@
   border-radius: 12px;
   width: 48px;
   height: 48px;
-  @apply flex justify-center items-center;
+  @apply flex justify-center items-center mr-6;
   &__number {
     font-family: Euclid Circular A Trial;
     font-style: normal;

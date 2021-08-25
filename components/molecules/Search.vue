@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full search__input">
+  <div class="search__input">
     <div
       class="p-1 flex border border-gray-200 rounded search__input__container"
     >
@@ -50,8 +50,7 @@
   font-size: 14px;
   line-height: 18px;
   color: #999999;
-  width: 890px;
-  @apply h-full;
+  @apply h-full flex-auto pr-6;
   input {
     background: transparent;
   }
