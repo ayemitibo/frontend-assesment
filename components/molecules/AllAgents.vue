@@ -1,6 +1,6 @@
 <template>
-  <ul>
-    <atom-container-link v-for="item in 5" :key="item">
+  <ul class="bg-white h-full-container overflow-y-auto">
+    <atom-container-link v-for="item in 7" :key="item">
       <template #image>
         <img
           class="w-8 h-8 rounded-full"

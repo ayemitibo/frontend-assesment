@@ -1,19 +1,34 @@
 <template>
   <div class="container">
-    <div class="container__title">
-      <slot name="title" />
-    </div>
-    <slot name="tab" :changeTab="changeTab" :activeTab="activeTab" />
-    <transition name="fade" mode="out-in">
-      <slot :activeTab="activeTab" />
-    </transition>
+    <atom-transition :name="transitionName" :active="iconShown">
+      <div class="bg-white h-full">
+        <div class="container__title">
+          <slot name="title" />
+        </div>
+        <slot name="tab" :changeTab="changeTab" :activeTab="activeTab" />
+        <atom-transition name="fade" active>
+          <slot :activeTab="activeTab" />
+        </atom-transition>
+      </div>
+    </atom-transition>
+    <slot
+      name="icon"
+      :shown="() => (iconShown = !iconShown)"
+      :isShown="iconShown"
+    />
   </div>
 </template>
 <script>
 export default {
+  props: {
+    transitionName: {
+      type: String
+    }
+  },
   data () {
     return {
-      activeTab: ''
+      activeTab: '',
+      iconShown: true
     }
   },
   methods: {
@@ -25,36 +40,33 @@ export default {
 </script>
 <style lang="scss" scoped>
 .container {
-  width: 30%;
-  @apply h-full;
-  &__title {
+  @apply h-full relative;
+
+  .btn-paginate {
+    width: 40px;
     height: 42px;
-    background: #46b2c8;
-    @apply flex items-center pl-3 justify-between;
-    p {
-      font-family: BR Sonoma;
-      font-style: normal;
-      font-weight: 600;
-      font-size: 16px;
-      text-transform: capitalize;
-      color: #ffffff;
-      line-height: 21px;
+    background: #200e32;
+    @apply flex justify-center items-center;
+    color: white;
+
+    &.right {
+      right: calc(0px - 40px);
+    }
+    &.left {
+      left: calc(0px - 40px);
     }
   }
-}
 
-.fade-enter {
-  // display: no;
-  opacity: 0;
-}
-.fade-enter-active {
-  transition: opacity 0.5s ease;
-}
-.fade-leave {
-  //   display: none;
-}
-.fade-leave-active {
-  transition: opacity 0.5s ease;
-  opacity: 0;
+  &__title {
+    background: #46b2c8;
+    font-family: BR Sonoma;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    line-height: 21px;
+    @apply flex items-center pl-3 justify-between py-2.5;
+  }
 }
 </style>

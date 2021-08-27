@@ -9,8 +9,19 @@
       </a>
     </div>
     <header class="z-10 py-4 flex-auto flex items-center justify-between">
-      <div class="btn-rounded w-8 h-8 flex justify-center items-center">
-        <base-icon name="back" />
+      <div
+        class="
+          btn-rounded
+          w-8
+          h-8
+          flex
+          justify-center
+          items-center
+          cursor-pointer
+        "
+        @click="closePanel"
+      >
+        <base-icon name="back" :rotate="isOpened ? '' : '-180'" />
       </div>
       <div class="container flex items-center h-full px-6 mx-auto">
         <!-- Search input -->
@@ -24,13 +35,13 @@
             style="outline: none"
           >
             <img
-              class="w-8 h-8 rounded-full"
+              class="w-8 h-8 rounded-full mr-2"
               src="@/assets/images/solomon.png"
               width="65"
               height="49"
               alt="User"
             >
-            <div class="flex items-center truncate">
+            <div class="flex items-center truncate" style="color: #023a59">
               <span
                 class="
                   truncate
@@ -38,13 +49,10 @@
                   text-sm
                   font-medium
                   group-hover:text-gray-800
+                  mr-2
                 "
-              >Solomon</span><svg
-                class="w-3 h-3 flex-shrink-0 ml-1 fill-current text-gray-400"
-                viewBox="0 0 12 12"
-              >
-                <path d="M5.9 11.4L.5 6l1.4-1.4 4 4 4-4L11.3 6z" />
-              </svg>
+              >Solomon</span>
+              <base-icon name="down" size="10" />
             </div>
           </button>
           <div
@@ -114,6 +122,21 @@
     </header>
   </div>
 </template>
+<script>
+export default {
+  props: {
+    isOpened: {
+      type: Boolean
+    }
+  },
+  methods: {
+    closePanel (e) {
+      e.preventDefault()
+      this.$emit('isOpen')
+    }
+  }
+}
+</script>
 <style lang="scss" scoped>
 .btn-rounded {
   box-shadow: 0px 2px 4px rgba(2, 58, 89, 0.16);

@@ -15,7 +15,7 @@
       <div class="text-white">
         <div style="background-color: #1c697a" class="flex justify-center p-5">
           <div style="color: #c2e2e9">
-            <p class="text-lg">
+            <p class="text-lg font-bold">
               Cheta And Daughters Limited
             </p>
             <span> RC123456789 </span>

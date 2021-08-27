@@ -1,6 +1,6 @@
 <template>
-  <ul>
-    <atom-container-link v-for="item in 5" :key="item">
+  <ul class="bg-white h-full-container overflow-y-auto">
+    <atom-container-link v-for="item in 7" :key="item">
       <template #image>
         <div>
           <base-icon name="add" size="30" />

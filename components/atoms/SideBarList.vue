@@ -14,7 +14,7 @@
       "
       href="forms.html"
     >
-      <base-icon :name="content.icon" />
+      <base-icon :name="content.icon" size="20" />
       <span class="ml-4" :style="{ color: content.color }">{{
         content.title
       }}</span>

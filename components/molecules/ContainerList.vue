@@ -1,5 +1,5 @@
 <template>
-  <ul>
+  <ul class="bg-white h-full-container overflow-y-auto">
     <atom-container-link>
       <template #image>
         <slot name="image" />
