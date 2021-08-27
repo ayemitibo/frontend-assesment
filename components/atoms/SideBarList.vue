@@ -12,7 +12,7 @@
         hover:text-gray-800
         dark:hover:text-gray-200
       "
-      href="forms.html"
+      href="#"
     >
       <base-icon :name="content.icon" size="20" />
       <span class="ml-4" :style="{ color: content.color }">{{

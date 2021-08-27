@@ -14,9 +14,13 @@
         </div>
       </template>
       <template #content>
-        <p>12b Emmanuel Hign street, Sur...</p>
-        <p><base-icon name="building" /> <span>Sterling Bank PLC</span></p>
-        <p style="color: #3056d3">
+        <p class="py-1">
+          12b Emmanuel Hign street, Sur...
+        </p>
+        <p>
+          <base-icon name="building" size="18" /> <span>Sterling Bank PLC</span>
+        </p>
+        <p style="color: #3056d3" class="pt-3">
           a day ago
         </p>
       </template>
